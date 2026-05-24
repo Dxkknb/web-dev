@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML Attributes</title>
+	<style>
+		body {
+			font-family: Helvetica, sans-serif;
+		}
+		
+		.colored {
+			background-color: rgb(245, 221, 221);
+		}
+	</style>
+</head>
+<body>
+<h1>HTML Attributes</h1>
+<hr>
+<main>
+	<section>
+		<h2>The href Attribute</h2>
+		<p>the <span CLASS="colored">&lt;a&gt;</span> tag defines a ahyperlink. The <span class="colored">href</span>
+			attribute specifies the URL of the page the link goes to:</p>
+		<pre style="background-color: aliceblue">
+                <code style="vertical-align: middle;">
+                    &lt;a href="https://www.w3schools.com"&gt;Visit W3Schools&lt;/a&gt;
+                </code>
+            </pre>
+	</section>
+	<section>
+		<h2>The src Attribute</h2>
+		<p>The <span class="colored">&lt;img&gt;</span> tag is used to embed an image in a HTML page. The <span
+				style="background-color: rgb(250, 221, 221);">src</span> attribute specifies the path to the image to be
+			display:</p>
+		<pre style="background-color: aliceblue;">
+                <code style="vertical-align: middle;">
+                    &lt;img src="img_girl.jpg"&gt;
+                </code>
+            </pre>
+	</section>
+	<section>
+		<h2>The width and height Attributes</h2>
+		<p>The <span class="colored">&lt;img&gt;</span> tag should also contain the <span class="colored">width</span>
+			and <span class="colored">height</span> attributes, which specify the width
+			and height of the image (in pixels):</p>
+		<pre style="background-color: aliceblue;">
+                <code style="vertical-align: middle;">
+                    &lt;img src="img_girl.jpg" width="500" height="600"&gt;
+                </code>
+            </pre>
+		<img width="800px" height="auto"
+		     src="https://png.pngtree.com/thumb_back/fh260/background/20240723/pngtree-thai-beach-landscape-blue-sky-beautiful-blue-ocean-sea-scape-island-image_15911321.jpg"
+		     alt="Paysage">
+	</section>
+	<section>
+		<h2>The al Attribute</h2>
+		<p>The required <span class="colored">alt</span> attribute for the <span class="colored">img</span> tag
+			specifies an alternate text for an image, if the image for some reason cannot be displayed.</p>
+		<p>This can be due to a slow connection, or an error in the <span class="colored">src</span> attribute, or
+			if the user uses a screen reader.</p>
+		<pre style="background-color: aliceblue;">
+			<code>
+				&lt;img src="img_girl.jpg" alt="Girl with a jacket"&gt;
+			</code>
+		</pre>
+	</section>
+	<section>
+		<h2>The style Attribute</h2>
+		<p>The <span class="colored">style</span> attribute is used to add styles to an element, such as color,
+			font, size, and more.</p>
+		<pre style="background-color: aliceblue;">
+			<code>
+				&lt;p style="color: red;"&gt;This is a red paragraph.&lt;/p&gt;
+			</code>
+		</pre>
+	</section>
+	<section>
+		<h2>The lang Attribute</h2>
+		<p>You should always include the <span class="colored">lang</span> attribute inside the <span
+				class="colored">&lt;html&gt;</span> tag, to declare the language of the web page.</p>
+		<p>This is meant to assist search engines and browsers.</p>
+	</section>
+	<section>
+		<h2>The title Attribute</h2>
+		<p>The <span class="colored">title</span> attribute defines some extra information about an element.</p>
+		<p>The value of the title attribute will be displayed as a tooltip when you mouse over the element.</p>
+		<pre style="background-color: aliceblue;">
+			<code>
+				&lt;p title="I'm a tooltip"&gt;This is a paragraph&lt;/p&gt;
+			</code>
+			<p title="I'm a tooltip" style="text-align: center">This a paragraph</p>
+		</pre>
+	</section>
+</main>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+	      rel="stylesheet">
+	<title>HTML Headings</title>
+	<style>
+		h1, h2, h3, h4, h5, h6 {
+			font-family: Roboto, sans-serif;
+			margin: 10px;
+		}
+		
+		body {
+			font-family: 'Open Sans', sans-serif;
+			line-height: 1.3;
+			max-width: 90%;
+			margin: 0 auto;
+		}
+		
+		a {
+			font-family: Roboto, sans-serif;
+			font-style: italic;
+		}
+		
+		.illustration {
+			max-width: 90%;
+			margin: 0 auto;
+			padding: 10px 20px;
+			background-color: lightgray;
+			border-radius: 10px;
+		}
+		
+		.illustration-content {
+			background-color: white;
+			padding: 10px;
+		}
+		
+		.note {
+			margin-top: 10px;
+			padding: 20px;
+			background-color: #fafabf;
+		}
+		
+		.colored {
+			background-color: #f3ecec;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+<h1>HTML Headings</h1>
+<hr>
+<p>HTML headings are titles or subtitles that you want to display on a webpage.</p>
+<hr>
+<div class="illustration">
+	<p>Example</p>
+	<div class="illustration-content">
+		<h1>Heading 1</h1>
+		<h2>Heading 2</h2>
+		<h3>Heading 3</h3>
+		<h4>Heading 4</h4>
+		<h5>Heading 5</h5>
+		<h6>Heading 6</h6>
+	</div>
+</div>
+<div class="note">
+	<p>
+		<strong>Note:</strong> Browsers automatically add some white space (a margin) before and after a heading.
+	</p>
+</div>
+<section>
+	<h2>Headings Are Important</h2>
+	<p>Search engines use the headings to index the structure and content of your web pages.</p>
+	<p>Users often skim a page by its headings. It is important to use headings to show the document structure.</p>
+	<p><span class="colored">&lt;h1&gt;</span> headings should be used for main headings, followed by <span
+			class="colored">&lt;h2&gt;</span> then the less important <span class="colored">&lt;h3&gt;</span>, and
+		so on.</p>
+	<p>For example:</p>
+	<ul>
+		<li><span class="colored">&lt;h1&gt;</span> - Page title</li>
+		<li><span class="colored">&lt;h2&gt;</span> - Section titles</li>
+		<li><span class="colored">&lt;h3&gt;</span> - Sub-sections</li>
+	</ul>
+	<div class="note">
+		<p><strong>Tip:</strong> Use only one <span class="colored">&lt;h1&gt;</span> per page - it represents the
+			main topic or title.</p>
+		<p><strong>Note:</strong> Use HTML headings for headings only. Don't use headings to make text <strong>BIG
+		</strong> or <strong>bold.</strong></p>
+	</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+	      rel="stylesheet">
+	<style>
+		body{
+			max-width: 80%;
+			margin: 0 auto;
+			font-size: 1.15rem;
+			font-family: 'Roboto', 'Montserrat', sans-serif;
+		}
+		h1{
+			font-family: 'Roboto', 'Montserrat', sans-serif;
+			font-size: 2.25rem;
+			margin: 25px 0;
+			color: #04AA6D;
+		}
+		h2, h3, h4, h5, h6{
+			font-family: 'Roboto', 'Montserrat', sans-serif;
+			margin: 15px 0;
+		}
+		.hr{
+			border: 1px solid lightgray;
+			box-shadow: 0 0 1px #04AA6D;
+		}
+		p {
+			font-size: 1.15rem;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 350;
+		}
+		.section{
+			padding: 1rem;
+			background-color: #EEE;
+			margin-top: 10px;
+		}
+		.colored {
+			background-color: #f3ecec;
+			color: red;
+		}
+		section div{
+			margin: 10px;
+			background-color: white;
+			padding: 10px;
+		}
+	</style>
+	<title>HTML Text Formatting</title>
+</head>
+<body>
+	<h1>HTML Text Formatting</h1>
+	<div class="hr"></div>
+	<p>HTML Contains several elements for defining text with a special meaning.</p>
+	<div class="hr"></div>
+	<section class="section">
+		<h2>HTML Formatting elements</h2>
+		<p>Formatting elements were design to display special types of text:</p>
+		<ul>
+			<li><span class="colored">&lt;b&gt;</span> - Bold text</li>
+			<li><span class="colored">&lt;strong&gt;</span> - Important text</li>
+			<li><span class="colored">&lt;i&gt;</span> - Italic text</li>
+			<li><span class="colored">&lt;em&gt;</span> - Emphasized text</li>
+			<li><span class="colored">&lt;mark&gt;</span> - Marked text</li>
+			<li><span class="colored">&lt;small&gt;</span> - Smaller text</li>
+			<li><span class="colored">&lt;del&gt;</span> - Deleted text</li>
+			<li><span class="colored">&lt;ins&gt;</span> - Inserted text</li>
+			<li><span class="colored">&lt;sub&gt;</span> - Subscript text</li>
+			<li><span class="colored">&lt;sup&gt;</span> - Superscript text</li>
+		</ul>
+	</section>
+	<section class="section">
+		<div>
+			<p><b>This text is bold.</b></p>
+			<p><strong>This text is important.</strong></p>
+		</div>
+		<div>
+			<p><i>This text is italic.</i></p>
+			<p><em>This is an emphasized text.</em></p>
+		</div>
+		<div>
+			<p><small>This is some smaller text.</small></p>
+		</div>
+		<div>
+			<p>Do not forget to buy <mark>milk</mark> today.</p>
+		</div>
+		<div>
+			<p>My favorite color is <del>blue</del> red.</p>
+		</div>
+		<div>
+			<p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
+		</div>
+		<div>
+			<p>Water formula: H<sub>2</sub>O   </p>
+		</div>
+		<div>
+			<p>Einstein relativity formula: E = mC<sup>2</sup></p>
+		</div>
+	</section>
+</body>
+</html>

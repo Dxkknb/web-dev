@@ -11,36 +11,52 @@
 			max-width: 700px;
 			margin: auto;
 		}
-		table, th, td {
+		.table table, .table th, .table td {
 			border: 1px solid black;
 			border-collapse: collapse;
 			padding: 10px 20px;
 		}
-		caption {
+		.table caption {
 			font-weight: bold;
 			font-family: sans-serif;
 			margin-bottom: 5px;
 			font-size: 1.35rem;
 		}
-		th{
+		.table th{
 			background-color: #04AA6D;
 			color: white;
 			font-size: 1.2rem;
+		}
+		
+		/* Table Size */
+		.table-size {
+			width: 100%;
+		}
+		.table-size, .table-size th, .table-size td {
+			padding: 10px 20px;
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		.table-size td {
+			text-align: center;
+		}
+		.table-size th {
+			height: 30px;
+			font-size: 1.2rem;
+			background-color: orange;
 		}
 	</style>
 </head>
 <body>
 	<main>
-		<section>
+		<section class="table">
 			<h1>Define HTML Tables</h1>
 			<table>
 				<caption>Company Contacts</caption>
 				<thead>
-					<tr>
-						<th>Company</th>
-						<th>Contact</th>
-						<th>Country</th>
-					</tr>
+					<th>Company</th>
+					<th>Contact</th>
+					<th>Country</th>
 				</thead>
 				<tbody>
 				<tr>
@@ -73,6 +89,27 @@
 					<td>Giovanni Rovelli</td>
 					<td>Italy</td>
 				</tr>
+				</tbody>
+			</table>
+		</section>
+		<hr>
+		<section>
+			<table class="table-size">
+				<thead>
+					<th colspan="2">Name</th>
+					<th>Age</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Jil</td>
+						<td>Smith</td>
+						<td>50</td>
+					</tr>
+					<tr>
+						<td>Eve</td>
+						<td>Jackson</td>
+						<td>94</td>
+					</tr>
 				</tbody>
 			</table>
 		</section>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HTML Layout</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			width: 100%;
+			background: #fefefe;
+		}
+		
+		.container {
+			max-width: 1200px;
+			margin-inline: auto;
+			background-color: #eee;
+			padding: 10px;
+		}
+		
+		.header-nav-container > * {
+			height: 100px;
+			margin-bottom: 10px;
+			border: 1px solid #bbb;
+			background-color: #ccc;
+			display: flex;
+		}
+		
+		main {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			gap: 10px;
+		}
+		
+		.section-article-container {
+			display: grid;
+			grid-template-rows: repeat(2, 1fr);
+			gap: 10px;
+		}
+		
+		.section-article-container > * {
+			height: 250px;
+			background-color: #ccc;
+		}
+		
+		.aside-container > * {
+			background-color: #ccc;
+			height: 100%;
+			display: flex;
+		}
+		.center {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		.font-25 {
+			font-size: 2.5rem;
+		}
+		
+		.footer-container > * {
+			height: 150px;
+			margin-top: 10px;
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="header-nav-container">
+		<header class="center font-25">
+			<p>HEADER</p>
+		</header>
+		<nav class="center font-25">
+			<p>NAV</p>
+		</nav>
+	</div>
+	<main>
+		<div class="section-article-container">
+			<section class="center font-25">
+				<p>SECTION</p>
+			</section>
+			<article class="center font-25">
+				<p>ARTICLE</p>
+			</article>
+		</div>
+		<div class="aside-container">
+			<aside class="center font-25">
+				<p>ASIDE</p>
+			</aside>
+		</div>
+	</main>
+	<div class="footer-container">
+		<footer class="center font-25">
+			<p>FOOTER</p>
+		</footer>
+	</div>
+</div>
+</body>
+</html>

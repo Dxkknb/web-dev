@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HTML Forms</title>
+	<style>
+		main {
+			max-width: 700px;
+			margin-inline: auto;
+		}
+		.form-section {
+			margin-bottom: 10px;
+		}
+		.form-section > label {
+			display: block;
+		}
+		.form-section input {
+			display: block;
+			width: 200px;
+			padding: 5px 10px;
+		}
+		input[type="submit"] {
+			padding: 5px 12px;
+			border: none;
+			background-color: #555;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<form action="#" method="GET">
+			<div class="form-section">
+				<label for="firstname">First name:</label>
+				<input type="text" id="firstname" name="firstname" placeholder="John" required>
+			</div>
+			<div class="form-section">
+				<label for="lastname">Last name:</label>
+				<input type="text" id="lastname" name="lastname" placeholder="Doe" required>
+			</div>
+			<input type="submit" value="Submit">
+		</form>
+	</main>
+</body>
+</html>

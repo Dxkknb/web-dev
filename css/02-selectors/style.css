@@ -1,0 +1,233 @@
+/* Selecteur universel*/
+
+*,
+*::before,
+*::after {
+    font-family: Poppins, Roboto, Helvetica, Montserrat, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* selecteurs de type */
+
+ li {
+     list-style-type: none;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ h1, h2, h3, h4, h5, h6 {
+     font-family: "Geist", sans-serif;
+ }
+
+ /* Selecteur d'ID */
+
+#main-header {
+    background-color: #f1f8f1;
+    padding: 20px 0;
+}
+
+ /* Selecteurs de classe */
+
+.title {
+    font-size: 2.25rem;
+    text-align: center;
+    color: #04AA6D;
+    margin: 0 0 20px;
+}
+
+.navbar ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 30px;
+}
+
+.navbar ul li {
+    padding: 10px 25px;
+}
+
+.navbar ul li:hover {
+    background-color: hotpink;
+}
+
+.navbar a {
+    color: #11114c;
+}
+
+.hero {
+    padding: 20px;
+    margin: 0 0 20px;
+    background-color: #fadfe5;
+}
+
+.hero .section-title {
+    color: hotpink;
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.description {
+    margin: 15px 0;
+}
+
+.btn {
+    border: none;
+    padding: 8px 20px;
+}
+
+.primary-btn {
+    background-color: #3b82f6;
+}
+
+.secondary-btn {
+    background-color: #4A5568;
+    color: white;
+}
+
+.cards {
+    max-width: 700px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: #f6f4f4;
+}
+
+.card > * {
+    padding: 0 10px;
+}
+
+.card > h3 {
+    margin: 0;
+    padding: 10px;
+}
+
+.card > p, .card a {
+    display: block;
+    margin: 5px;
+}
+
+.card a {
+    font-size: 1rem;
+}
+
+.card h3 {
+    background-color: lightgrey;
+}
+
+.featured h3 {
+    background-color: #8aa8df;
+}
+
+.special h3{
+    background-color: lightseagreen;
+}
+
+.form-section h2 {
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin: 15px 0;
+}
+
+.form-group label {
+    display: inline-block;
+    margin-right: 10px;
+}
+.submit-btn {
+    background-color: #555555;
+    color: white;
+}
+
+/* Sélecteur d'attribut */
+
+.form-group [type='text'], .form-group [type='email'], .form-group [type='password'] {
+    width: 50%;
+    padding: 5px 10px;
+    border: 1px solid #555555;
+
+    &:focus {
+        border: 2px solid #555555;
+        outline: none;
+    }
+}
+
+.form-group select[id='country'] {
+    width: 150px;
+    background-color: lightgrey;
+    border: none;
+    padding: 5px 10px;
+}
+
+/* Sélecteurs de regroupement */
+
+.form-section, .list-section, .table-section {
+    max-width: 700px;
+    margin-inline: auto;
+    margin-top: 20px;
+}
+
+.list-section {
+    background-color: #ffe;
+    padding: 10px;
+}
+
+.tech-list li {
+    margin: 10px 0;
+}
+
+table, tr, th, td {
+    border-collapse: collapse;
+}
+
+table tr:nth-child(even) {
+    background-color: #fbdadf;
+}
+
+th, td {
+    padding: 5px 12px;
+}
+
+th {
+    background-color: lightseagreen;
+}
+
+td.active {
+    color: green;
+    font-weight: 600;
+}
+
+.main-footer {
+    margin-top: 20px;
+    padding: 40px 100px;
+    background-color: #4A5568;
+    color: white;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: hotpink;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* speudo-classes et speudo-éléments */
+
+.social-links a:hover {
+    color: orangered;
+}

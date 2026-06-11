@@ -1,0 +1,88 @@
+*::before,
+*::after,
+* {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --spacing: 0.25rem;
+    --dark-gray: #4A5568;
+    --dark: #111;
+    --light-white: #fefefe;
+}
+
+/* Global */
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Poppins, Roboto, "Open Sans", "Geist", Monospaced, Montserrat, sans-serif;
+    min-height: 100vh;
+}
+
+/* Header */
+
+header {
+    padding: calc(var(--spacing) * 5);
+    background-color: var(--dark);
+    color: var(--light-white);
+}
+
+.center {
+    max-width: 60%;
+    margin-inline: auto;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    line-height: 20px;
+    vertical-align: middle;
+    padding: 5px;
+    margin: 0 5px;
+}
+
+ul li a {
+    font-size: 1.15rem;
+    color: var(--light-white);
+}
+
+
+.logo svg {
+    width: calc(var(--spacing) * 50);
+    height: auto;
+}
+
+.actions span {
+    line-height: 20px;
+}
+
+.actions svg {
+    width: calc(var(--spacing) * 7);
+    height: 100%;
+    color: white;
+}
+
+.main-title {
+    font-size: clamp(1.5rem, calc(1rem + 2vw) ,6rem);
+    text-align: center;
+    line-height: 1.3;
+}

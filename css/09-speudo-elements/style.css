@@ -1,0 +1,289 @@
+* {
+    box-sizing: border-box;
+    font-family:Roboto, "Open Sans", "Geist", Monospaced, Montserrat, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+article > * + * {
+    margin-top: 1em;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: calc(1.75rem + 2vw);
+    max-width: 22ch;
+}
+
+h3 {
+    font-size: calc(1.4rem + 1vw);
+}
+
+article p, header a {
+    font-size: calc(1rem + 0.8vw);
+}
+
+/* HEADER */
+header {
+    padding: 1rem calc(10rem - 2vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #050812;
+    color: lightgray;
+
+    h2 {
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+    }
+
+    ul li {
+        padding: 0.3rem 0.8rem;
+        &:hover {
+            background-color: #666;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.center {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+/* Pseudo-element: ::first-letter */
+
+article > p::first-letter {
+    color: mediumblue;
+    float: left;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1;
+    margin-inline-end: 0.2em;
+
+}
+
+/* Pseudo-elements: ::before and ::after */
+
+.boxes {
+    margin: 1rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card {
+    max-width: clamp(300px, calc(300px + 1vw), 600px);
+    height: max-content;
+    background-color: #f8f5f5;
+    border-radius: 0.3rem;
+    position: relative;
+    transition: background-color 0.3s ease-in;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    background-color: darkgray;
+    transform: translateX(-5px) translateY(-5px);
+    border-radius: 0.3rem;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover {
+    background-color: lightgray;
+}
+
+.card > img {
+    max-width: 100%;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+
+.card .description {
+    padding: 0.5rem;
+}
+
+.description h3 {
+    margin: 0;
+    margin-block: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.description p {
+    line-height: 1.4;
+    text-align: left;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 3px;
+    bottom: 3px;
+    border-radius: 50%;
+    background-color: darkgray;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+/* Pseudo element: ::first-line */
+
+.special-paragraph::first-line {
+    color: goldenrod;
+}
+
+/* Pseudo element: ::backdrop */
+
+.center-main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 1rem;
+}
+
+.btn {
+    text-align: center;
+    border: none;
+    padding: 5px 15px;
+    font-size: 1.025em;
+}
+
+.btn-primary {
+    background-color: #3b82f6;
+}
+
+.btn-secondary {
+    background-color: #888;
+}
+
+dialog {
+    background-color: #ef9fc6;
+    border: none;
+
+    form {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Dims background */
+    backdrop-filter: blur(5px);           /* Optional: Blurs background */
+}
+
+/* Pseudo element: ::marker */
+
+::marker {
+    color: hotpink;
+}
+
+.center-main > h3  {
+    margin: 0;
+}
+
+.center-main ul li::marker {
+    font-size: 1.8rem;
+}
+
+/* Pseudo element: ::placeholder */
+
+.container-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.sign-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-in h1 {
+    font-size: 2.5rem;
+}
+
+.form {
+    padding: 1rem;
+    border: 2px solid darkblue;
+    border-radius: 7px;
+    font-size: 1rem;
+}
+
+.form div {
+    margin: 1rem 0;
+}
+
+.form > div > label {
+    display: block;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 7px 15px;
+    font-size: 1em;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #4A5568;
+}
+
+.flex {
+    display: flex;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 7px 20px;
+    font-size: 1.1em;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}
+
+.socials {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.socials button {
+    width: 100%;
+    margin: 0.2rem 0;
+    padding: 0.5rem 1rem;
+    font-size: 1.05em;
+}
+
+input::placeholder {
+    opacity: 0.6;
+    color: #4A5568;
+    font-size: 1em;
+}

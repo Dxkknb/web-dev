@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Css Pseudo Classes</title>
+</head>
+<body>
+    <main class="container">
+        <h1 class="main-title">Pseudo Classes</h1>
+        <hr>
+        <div class="form-container">
+            <h3>Sign In</h3>
+            <form>
+                <div>
+                    <label for="email" class="form-label">Email Adress</label>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        id="email" 
+                        placeholder="A valid email, like name@domain.com"
+                        class="form-control form-email"
+                        title="Provide an email"
+                        required
+                        >
+                </div>
+                <div>
+                    <label for="password" class="form-label">Password</label>
+                    <input 
+                        type="password" 
+                        name="password" 
+                        id="password" 
+                        min="4" 
+                        maxlength="30"
+                        class="form-control form-password"
+                        title="Provide a password"
+                        required
+                        >
+                </div>
+                <input type="submit" value="Send" role="button" class="form-submit">
+            </form>
+        </div>
+        <a href="https://web.dev/learn/css/pseudo-classes" class="link" target="_blank" >Learn pseudo classes on webdev</a>
+    </main>
+</body>
+</html>

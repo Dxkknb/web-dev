@@ -1,0 +1,115 @@
+:root {
+    --main-color: rgb(230, 107, 62);
+    --active-color: rgb(34, 34, 189);
+    --valid: green;
+    --invalid: red;
+}
+
+.container {
+    max-width: 700px;
+    margin-inline: auto;
+}
+
+.form-container {
+    padding: 1rem;
+    border: 2px solid #feeeee;
+    border-radius: 5px;
+    background-color: #fffffe;
+    font-family: Roboto, poppins, sans-serif;
+}
+
+.form-container > h3 {
+    margin: 1rem 0;
+    font-size: 2.25rem;
+    color: var(--main-color);
+}
+
+.form-container > form > div {
+    margin: 1rem 0;
+    font-size: 1.05rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.form-control {
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.377);
+    border-radius: 5px;
+    font-size: 1.05rem;
+    padding: 0.5rem 1rem;
+    width: 50%;
+    position: relative;
+    transition: width 0.3s ease-in-out;
+}
+
+
+.form-control::placeholder{
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+.form-submit {
+    background-color: var(--main-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    width: 6rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.1s ease-in;
+}
+
+/* Pseudo class: :hover */
+
+.form-submit:hover {
+    --darkblue: rgb(0, 0, 87);
+    background-color: var(--darkblue);
+}
+
+.form-control:hover::after {
+    content: attr(title);
+    display: absolute;
+    padding: 2px 5px;
+    bottom: 0.5px;
+    right: 50%;
+    z-index: 100;
+}
+
+/* Pseudo class: :active */
+
+.form-control:active {
+    border-color: var(--active-color);
+}
+
+/* Pseudo class: :valid, :invalid, :focus */
+
+.form-email:invalid{
+    border-color: var(--invalid);
+}
+
+.form-email:valid{
+    border-color: var(--valid);
+}
+
+.form-control:focus {
+    width: 60%;
+    border-width: 2px;
+    border-color: var(--main-color);
+}
+
+.link {
+    color: blue;
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.05rem;
+}
+
+/* Pseudo class: :visited */
+
+.link:visited {
+    color: rgb(206, 6, 206);
+}

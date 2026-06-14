@@ -113,3 +113,77 @@
 .link:visited {
     color: rgb(206, 6, 206);
 }
+
+section {
+    font-family: Poppins, Roboto, "Open Sans", "Geist", Monospaced, Montserrat, sans-serif;
+}
+
+section article {
+    margin-bottom: 1rem;
+    background-color: #ffffee;
+    padding: 0.3rem 0.5rem;
+}
+
+article p:first-child, article p:last-child {
+    position: relative;
+}
+
+article p:first-child::before, article p:last-child::after {
+    content: "''";
+    background-color: lightcoral;
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+article p:first-child::before {
+    margin-inline-start: -5px;
+    top: -5px;
+}
+
+article p:last-child::after {
+    margin-inline-end: 5px;
+    bottom: -15px;
+}
+
+.my-parent div:first-of-type {
+    background-color: #87b8ff;
+    padding: 0.5rem ;
+}
+
+.my-parent div:last-of-type {
+    margin-top: 5px;
+    background-color: #5cb85c;
+    padding: 0.5rem;
+}
+
+.m-10 {
+    margin-top: 10px;
+}
+
+.article ul li:nth-child(2) {
+    background-color: yellow;
+    padding: 5px 10px;
+}
+
+.article ul li:nth-last-child(2) {
+    background-color: orange;
+    padding: 5px 10px;
+}
+
+ul li:nth-child(odd) {
+    background-color: lightcoral;
+}
+
+.post {
+    max-width: 250px;
+    background-color: lightgray;
+}
+
+.post :is(img, h2, p) {
+    max-width: inherit;
+}
+
+.post .description {
+    padding: 0.5rem;
+}

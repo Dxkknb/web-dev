@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: local('Jetbrains Mono'),
+        url("assets/fonts/JetBrainsMono-Regular.woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: local('Jetbrains Mono'),
+    url("assets/fonts/JetBrainsMono-Bold.woff2");
+    font-weight: 700;
+    font-display: swap;
+}
+
+main {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+h2 {
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: 3rem;
+}
+
+section {
+    font-family: 'Manrope', sans-serif;
+}

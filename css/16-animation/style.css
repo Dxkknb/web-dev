@@ -1,0 +1,79 @@
+:root {
+    --size: 200px;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #344e41;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 200px;
+    border: dashed 4px #588157;
+    border-radius: 1rem;
+    font-size: 3rem;
+}
+
+.square {
+    display: grid;
+    place-items: center;
+    width: var(--size);
+    height: var(--size);
+    border-radius: inherit;
+    color: #686c71;
+}
+
+.square-1 {
+    background-color: #a3b18a;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 1s, 0.5s;
+    transition-timing-function: cubic-bezier(0.48, 0, 0.39, 1);
+    transition-behavior: allow-discrete;
+
+    &:hover {
+        opacity: 1;
+        transform: scale(1.2);
+
+        @starting-style {
+            opacity: 0;
+            transform: scale(1);
+        }
+    }
+
+}
+
+.center {
+    display: grid;
+    place-items: center;
+}
+
+.square-1 svg {
+    color: red;
+}
+
+.spinner svg {
+    animation: spinner;
+    animation-duration: 0.7s;
+    animation-iteration-count: 10;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    color: white;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

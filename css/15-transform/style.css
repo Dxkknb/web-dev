@@ -1,0 +1,48 @@
+:root {
+    --size: 200px;
+}
+body {
+    font-family: sans-serif;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #344e41;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 200px;
+    border: dashed 4px #588157;
+    border-radius: 1rem;
+    font-size: 3rem;
+}
+
+.square {
+    display: grid;
+    place-items: center;
+    width: var(--size);
+    height: var(--size);
+    border-radius: inherit;
+    color: #686c71;
+}
+
+.square-1 {
+    background-color: #a3b18a;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: translate(100px, -100px) scale(0.3);
+        border-radius: 100%;
+        background-color: hsl(100, 45%, 59%);
+        overflow: hidden;
+    }
+}
+
+.center {
+    display: grid;
+    place-items: center;
+}

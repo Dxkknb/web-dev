@@ -1,0 +1,36 @@
+.hero-section__heading {
+
+    .hero-section__heading__title {
+        text-align: center;
+        color: var(--white);
+        margin: 1.5rem 0;
+    }
+
+    .hero-section__heading__content {
+        text-align: center;
+        color: var(--white);
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.25rem 2.5rem;
+    border-radius: 10px;
+    text-align: center;
+
+    .btn__text {
+        display: inline-block;
+        margin-right: 0.625rem;
+    }
+}
+
+.btn--primary {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.hero-section__img-container {
+    height: 191px;
+    width: 100%;
+    background-color: var(--color-primary-100);
+}

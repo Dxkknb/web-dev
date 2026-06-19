@@ -1,0 +1,86 @@
+:root {
+    /* Font */
+    --font: "Inter";
+}
+
+/* Header's fonts classes */
+
+.text-h1 {
+    font-family: var(--font), sans-serif;
+    font-weight: 700;
+    font-size: 4.5rem;
+}
+
+.text-h2 {
+    font-family: var(--font), sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.text-h3 {
+    font-family: var(--font), sans-serif;
+    font-weight: 700;
+    font-size: 3.375rem;
+}
+
+.text-h4 {
+    font-family: var(--font), sans-serif;
+    font-weight: 700;
+    font-size: 2.25rem;
+}
+
+.text-h5 {
+    font-family: var(--font), sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+}
+
+/* Paragraph's fonts classes */
+
+.text-p1--semibold {
+    font-family: var(--font), sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+}
+
+.text-p1--regular {
+    font-family: var(--font), sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.text-p2--bold {
+    font-family: var(--font), sans-serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.text-p2--medium {
+    font-family: var(--font), sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+}
+
+.text-p2--regular {
+    font-family: var(--font), sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+}
+
+.text-p3--medium {
+    font-family: var(--font), sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.text-p3--regular {
+    font-family: var(--font), sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+}

@@ -1,0 +1,16 @@
+.bg-dark-blue {
+    background-color: var(--dark-blue);
+}
+
+.mb-60 {
+    margin-bottom: 3.75rem;
+}
+
+.grid-center {
+    display: grid;
+    place-items: center;
+}
+
+.mt-100 {
+    margin-top: 6.25rem;
+}

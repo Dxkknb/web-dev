@@ -1,0 +1,21 @@
+.container__h100 {
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+.header {
+    max-height: 56px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.hero-section {
+    min-height: 813px;
+    background-image: url("../../assets/hero-section-svg.svg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 6rem 1rem;
+}

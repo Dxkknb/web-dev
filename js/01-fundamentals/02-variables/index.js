@@ -36,3 +36,9 @@ name = "John";
 admin = name;
 
 alert(`Admin: ${admin}`);
+
+// Exercise 2: Assign the correct name
+let ourPlanet = "Earth";
+let currentUserName = "John Doe";
+
+console.log(ourPlanet, currentUserName);

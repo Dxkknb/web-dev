@@ -27,3 +27,12 @@ const COLOR_ORANGE = "#FF7F00";
 let currentColor = COLOR_ORANGE;
 
 console.log(`Current Color: ${currentColor}.`);
+
+// Exercise 1: Working with variables
+
+let admin, name;
+
+name = "John";
+admin = name;
+
+alert(`Admin: ${admin}`);

@@ -63,3 +63,8 @@ if (product === undefined) {
 }
 
 console.log("Value of 'product' variable: ", product);
+
+// Objects and Symbols
+
+console.log(typeof null); // object
+console.log(typeof Symbol("id")); // symbol

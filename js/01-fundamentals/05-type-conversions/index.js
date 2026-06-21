@@ -18,3 +18,11 @@ console.log(Number(null)); // 0
 console.log(Number(undefined)); // NaN
 console.log(Number(true)); // 1
 console.log(Number(false)); // 0
+
+// Boolean Conversion
+
+console.log(Boolean(1)); // true
+console.log(Boolean(0)); // false
+
+console.log(Boolean("Hello JavaScript!")); // true
+console.log(Boolean("")); // false

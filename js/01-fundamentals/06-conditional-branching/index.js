@@ -34,3 +34,11 @@ if (Number.isNaN(year)) {
 } else {
 	alert("Exactly!");
 }
+
+// Ternary operator '?'
+
+let userAge = prompt("How old are you?", '');
+let accessAllowed = Number(userAge) >= 18;
+let message = accessAllowed ? "Welcome to the profile page!": "Access denied!";
+
+alert(message);

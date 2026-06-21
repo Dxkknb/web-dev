@@ -20,3 +20,17 @@ let falsyValues = 0 && "" && null && undefined && NaN && false;
 if (!falsyValues) {
 	console.log("Falsy values!");
 }
+
+// Else and Else If clause
+
+year = Number(year)
+
+if (Number.isNaN(year)) {
+	alert("Wrong year provided!");
+} else if (year < 2015) {
+	alert("Too early...");
+} else if (year > 2015) {
+	alert("Too late.");
+} else {
+	alert("Exactly!");
+}

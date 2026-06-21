@@ -52,3 +52,14 @@ if (age) {
 	console.log(`I'm ${age} years old.`);
 }
 
+// The 'undefined' value
+
+let product;
+
+console.log("Value of 'product' variable: ", product);
+
+if (product === undefined) {
+	product = "BMW Car";
+}
+
+console.log("Value of 'product' variable: ", product);

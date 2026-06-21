@@ -8,13 +8,10 @@ alert(`Hello, ${name}!`);
 let age = prompt("Enter your age:", 0);
 
 
-if (!Number.isNaN(age)) {
+if (Number.isNaN(parseInt(age))) {
 	alert("Provide a correct age.");
-}
-else if (age === null) {
+} else if (age === null) {
 	alert("Provide your age please.");
-} else if (age.trim() === '') {
-	alert("Provide a valid age, not an empty value.")
 } else {
 	age = parseInt(age);
 
@@ -22,5 +19,17 @@ else if (age === null) {
 		alert("Your age must be a positive integer.");
 	} else {
 		alert(`You're ${age} years old.`);
+	}
+}
+
+// Confirm
+
+if (!(Number.isNaN(parseInt(age)) || age === null)) {
+	let confirmation = confirm(`Have you really ${age} years old?: `);
+
+	if (confirmation) {
+		alert(`Your age is ${age}.`);
+	} else {
+		alert(`You confirm that you are not ${age} years old.`);
 	}
 }

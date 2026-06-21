@@ -39,3 +39,16 @@ if (canBeDelivered) {
 } else {
 	console.log(`There are ${productsInStockQuantity} items of product left in stock.`)
 }
+
+// The 'null' value
+
+let age = null
+
+if (age === null) {
+	age = 18;
+}
+
+if (age) {
+	console.log(`I'm ${age} years old.`);
+}
+

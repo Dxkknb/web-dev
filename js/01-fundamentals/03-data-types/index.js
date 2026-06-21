@@ -10,3 +10,10 @@ console.log(`Total products price: $${totalProductsPrice}`);
 console.log("Infinity:", Infinity);
 console.log("-Infinity:", -Infinity);
 console.log("NaN:", NaN);
+
+// String
+
+let name = "John Doe";
+let greeting = `Hello, ${name}!`;
+
+console.log(greeting);

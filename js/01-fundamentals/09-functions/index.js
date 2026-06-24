@@ -21,6 +21,7 @@ greet(); // Hello mate!
 let username = "John";
 
 function sayHi() {
+    username = "Bob";
     let message = 'Hello, ' + username;
     console.log(message);
 }

@@ -12,3 +12,17 @@ if (hour <= 10 || hour > 18) {
 } else {
 	console.log("the office is opened.");
 }
+
+// && (AND)
+
+console.log(true && true); // true
+console.log(true && false); // false
+console.log(false && true); // false
+console.log(false && false); // false
+
+hour = 12;
+let minute = 30;
+
+if (hour === 12 && minute === 30) {
+	console.log("Time is 12:30");
+}

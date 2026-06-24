@@ -27,3 +27,16 @@ function sayHi() {
 }
 
 sayHi();
+
+// Parameters and arguments
+
+/**
+ * capitalize a string
+ * @param {string} string 
+ * @returns {string}
+ */
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+}
+
+console.log(capitalize("mama mia 😍"));

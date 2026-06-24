@@ -26,3 +26,10 @@ let minute = 30;
 if (hour === 12 && minute === 30) {
 	console.log("Time is 12:30");
 }
+
+// ! (NOT)
+
+console.log(!true); // false
+console.log(!0); // true
+console.log(!!"non-empty string"); // ttrue
+console.log(!!null); // false

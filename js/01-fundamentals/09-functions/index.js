@@ -15,3 +15,14 @@ function greet() {
 greet(); // Hello mate!
 
 //console.log(greeting); // greeting is not defined
+
+// Outer variables
+
+let username = "John";
+
+function sayHi() {
+    let message = 'Hello, ' + username;
+    console.log(message);
+}
+
+sayHi();

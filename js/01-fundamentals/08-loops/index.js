@@ -25,3 +25,12 @@ for (let i = 10; i > 0; i--) {
 
 	console.log(`value: ${i}`);
 }
+
+// 'continue' statement
+console.log("Odd numbers:");
+
+for (let i = 0; i <= 10; i++) {
+	if (i % 2 === 0) continue;
+
+	console.log(i);
+}

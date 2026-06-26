@@ -91,3 +91,91 @@ function checkParityWithStrictBitwise(n) {
 for(let i = 0; i < 20; i++) {
 	console.log(`${i} -> ${checkParityWithStrictBitwise(i)}`);
 }
+
+// Exercise 6:
+/**
+ * Returns a greeting based on languageCode
+ * @param {string} languageCode
+ * @returns {string}
+ */
+function getCustomGreeting(languageCode) {
+	let greeting = '';
+
+	switch (languageCode) {
+		case 'fr':
+			greeting =  'Bonjour';
+			break;
+		case 'es':
+			greeting = 'Hola';
+			break;
+		case 'en':
+			greeting = 'Hello';
+			break;
+		default :
+			greeting = 'Hello';
+			break;
+	}
+
+	return greeting;
+}
+
+console.log("Fr ->", getCustomGreeting('fr'));
+console.log("en ->", getCustomGreeting('en'));
+console.log("es ->", getCustomGreeting('es'));
+console.log("default ->", getCustomGreeting(''));
+
+
+// Exercise 7:
+/**
+ *
+ * @param {string} inputUsername
+ * @param {number} registrationAge
+ * @return {string}
+ */
+function getUsernameWithFallback(inputUsername, registrationAge) {
+	let username = inputUsername  ?? 'Guest';
+
+	if (registrationAge < 13) {
+		username = 'Junior_' + username;
+	} else {
+		username = 'Guest';
+	}
+
+	return username;
+}
+
+console.log(getUsernameWithFallback("Bernard", 12));
+console.log(getUsernameWithFallback("", 12));
+
+
+// Exercise 8:
+/**
+ * Calculate the sum of 1 to n except multiples of 3 and 7
+ * @param {number} n
+ * @returns {number}
+ */
+function sumUpToNWithExclusions(n) {
+	let sum = 0;
+
+	for (let i = 0; i <= n; i++) {
+		if (i % 3 === 0 || i % 7 === 0) continue;
+
+		sum += i;
+	}
+
+	return sum;
+}
+
+console.log("n = 20 ->", sumUpToNWithExclusions(20));
+console.log("n = 10 ->", sumUpToNWithExclusions(10));
+
+// Exercise 9:
+
+function countdownWithStep(start, step) {
+	while (start >= step) {
+		console.log("->", start);
+		start -= step;
+	}
+}
+
+countdownWithStep(50, 5);

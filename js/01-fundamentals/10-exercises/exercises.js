@@ -273,3 +273,47 @@ for (let num = 1; num <= 50; num++) {
 		console.log(`${num} is a prime number`);
 	}
 }
+
+// Exercise 13:
+/**
+ * Get fibonacci number
+ * @param {number} n
+ * @returns {number|null}
+ */
+function getFibonacciNumber(n) {
+	if (n < 0) return null;
+
+	if (n === 0) return 0;
+	if (n=== 1) return 1;
+
+	let a = 0;
+	let b = 1;
+
+	for (let i = 2; i <= n; i++) {
+		let current = a + b;
+		a = b;
+		b = current;
+	}
+
+	return b;
+}
+
+console.log(getFibonacciNumber(10));
+
+/**
+ * Get fibonacci number
+ * @param {number} n
+ * @returns {number|null}
+ */
+function getFibonacciNumberRecursive(n) {
+
+	if (n < 0) return null;
+
+	if (n === 0) return 0;
+
+	if (n === 1) return 1;
+
+	return getFibonacciNumberRecursive(n - 1) + getFibonacciNumberRecursive(n - 2);
+}
+
+console.log(getFibonacciNumberRecursive(15));

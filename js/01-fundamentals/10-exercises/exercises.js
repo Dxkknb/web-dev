@@ -184,3 +184,64 @@ function countdownWithStep(start, step) {
 }
 
 countdownWithStep(50, 5);
+
+// Exercise 10:
+/**
+ * Displays a triangle in the console using the character specified in `symbol`
+ * @param {number} height
+ * @param {string} symbol
+ * @returns {void}
+ */
+function drawAdvancedTriangle(height, symbol= "*") {
+	for (let i = 1; i <= height; i++) {
+		let line = "";
+
+		for (let j = 1; j < height - i; j++) {
+			line += " ";
+		}
+
+		for (let k = 0; k < 2*i - 1; k++) {
+			line += symbol;
+		}
+
+		console.log(line);
+	}
+}
+
+drawAdvancedTriangle(5);
+drawAdvancedTriangle(5, "#");
+
+// Exercise 11:
+/**
+ * FizzBuzz
+ * @param {number} n
+ * @returns {void}
+ */
+
+function fizzBuzz(n) {
+	function displayFizzBuzz(num) {
+
+		if (num % 3 === 0 && num % 5 === 0) {
+			console.log("FizzBuzz");
+		} else if ( num % 3 === 0) {
+			console.log("Fizz");
+		} else if (num % 5 === 0) {
+			console.log("Buzz");
+		} else{
+			console.log(num);
+		}
+	}
+
+	if (n <= 1) {
+		console.log(n);
+	} else {
+		for (let i = 1; i <= n; i++) {
+			displayFizzBuzz(i);
+		}
+	}
+}
+
+fizzBuzz(15);
+fizzBuzz(9);
+fizzBuzz(2);
+fizzBuzz(-10);

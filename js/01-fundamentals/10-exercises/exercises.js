@@ -170,7 +170,12 @@ console.log("n = 20 ->", sumUpToNWithExclusions(20));
 console.log("n = 10 ->", sumUpToNWithExclusions(10));
 
 // Exercise 9:
-
+/**
+ * Starts a countdown
+ * @param {number} start
+ * @param {number} step
+ * @returns {void}
+ */
 function countdownWithStep(start, step) {
 	while (start >= step) {
 		console.log("->", start);

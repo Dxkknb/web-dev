@@ -245,3 +245,31 @@ fizzBuzz(15);
 fizzBuzz(9);
 fizzBuzz(2);
 fizzBuzz(-10);
+
+// Exercise 12:
+/**
+ * Check if a number is a prime number
+ * @param {number} number
+ * @returns {boolean}
+ */
+function isPrime(number) {
+	if (number < 2) return false;
+
+	if (number === 2 || number === 3 ) return true;
+
+	if (number % 2 === 0 || number % 3 === 0) return false;
+
+	const divider = Math.floor(Math.sqrt(number));
+
+	for (let i = 5; i <= divider; i += 6) {
+		if ( number % i === 0 || number % (i + 2) === 0) return false;
+	}
+
+	return true;
+}
+
+for (let num = 1; num <= 50; num++) {
+	if (isPrime(num)) {
+		console.log(`${num} is a prime number`);
+	}
+}

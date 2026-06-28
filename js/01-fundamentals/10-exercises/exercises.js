@@ -317,3 +317,28 @@ function getFibonacciNumberRecursive(n) {
 }
 
 console.log(getFibonacciNumberRecursive(15));
+
+
+// Exercise 14:
+/**
+ * Counts the total number of prime numbers less than or equal to n
+ * @param {number} n
+ * @returns {number}
+ */
+function countPrimesUpToN(n) {
+	if (n < 2) {
+		return 0;
+	}
+
+	let totalPrimes = 0;
+
+	for (let i = 2; i <= n; i++) {
+		if (isPrime(i)) {
+			totalPrimes ++;
+		}
+	}
+
+	return totalPrimes;
+}
+
+console.log(`Total primes: ${countPrimesUpToN(50)}`);

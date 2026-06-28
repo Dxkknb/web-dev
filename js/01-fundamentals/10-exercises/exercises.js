@@ -408,3 +408,36 @@ console.log(findMaximumOfThree(-5.4, -2.8, -9.1));  // -2.8
 console.log(findMaximumOfThree(4, 4.5, 4.2));  // 4.5
 console.log(findMaximumOfThree(7, Infinity, 3)); // NaN
 console.log(findMaximumOfThree(7, NaN, 3)); // NaN
+
+// Exercise 17:
+/**
+ * Checks whether a number is ‘perfect’
+ * @param {number} n
+ */
+function isPerfectNumber(n) {
+	function sum(numbers) {
+		return numbers.reduce((tot, curr) => tot + curr, 0);
+	}
+
+	if (!Number.isFinite(n)) {
+		return false;
+	}
+
+	/**
+	 * table of number
+	 * @type {number[]}
+	 */
+	const divisors = [];
+
+	for (let divisor = 1; divisor < n; divisor++) {
+		if (n % divisor === 0) {
+			divisors.push(divisor);
+		}
+	}
+
+	return sum(divisors) === n;
+}
+
+for (let i = 1; i <= 50; i++) {
+	console.log(`${i} is perfect: ${isPerfectNumber(i)}`);
+}

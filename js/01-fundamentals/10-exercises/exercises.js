@@ -342,3 +342,36 @@ function countPrimesUpToN(n) {
 }
 
 console.log(`Total primes: ${countPrimesUpToN(50)}`);
+
+// Exercise 15:
+
+/**
+ * Performs the multiplication of two integers (positive or negative) using only addition or subtraction
+ * @param {number} a
+ * @param {number} b
+ * @returns {number | NaN}
+ */
+function multiplyWithoutOperator(a, b) {
+	if (!Number.isInteger(a) || !Number.isInteger(b)) {
+		return NaN;
+	}
+
+	if (a === 0 || b === 0) {
+		return 0;
+	}
+
+	const isNegative = (a < 0) !== (b < 0);
+
+	let multiplicand = Math.abs(a);
+	let multiplier = Math.abs(b);
+
+	let total = 0;
+
+	for (let i = 0; i < multiplier; i++) {
+		total += multiplicand;
+	}
+
+	return isNegative ? -total : total;
+}
+
+console.log("Multiplication: ", multiplyWithoutOperator(9, -7));

@@ -375,3 +375,36 @@ function multiplyWithoutOperator(a, b) {
 }
 
 console.log("Multiplication: ", multiplyWithoutOperator(9, -7));
+
+// Exercise 16:
+/**
+ * Returns the largest of the three numbers
+ * @param {number} a
+ * @param {number} b
+ * @param {number} c
+ * @returns {number | NaN}
+ */
+function findMaximumOfThree(a, b, c) {
+	function findMaxOfTwo(x, y) {
+		return x >= y ? x : y;
+	}
+
+	if ( !Number.isFinite(a) ||
+		 !Number.isFinite(b) ||
+		 !Number.isFinite(c)
+	) {
+		return NaN;
+	}
+
+	let maximum = findMaxOfTwo(a, b);
+	maximum = findMaxOfTwo(maximum, c);
+
+	return maximum;
+}
+
+console.log(findMaximumOfThree(5, 9, 3));  // 9
+console.log(findMaximumOfThree(5.8, 9.2, 3.6));  // 9.2
+console.log(findMaximumOfThree(-5.4, -2.8, -9.1));  // -2.8
+console.log(findMaximumOfThree(4, 4.5, 4.2));  // 4.5
+console.log(findMaximumOfThree(7, Infinity, 3)); // NaN
+console.log(findMaximumOfThree(7, NaN, 3)); // NaN

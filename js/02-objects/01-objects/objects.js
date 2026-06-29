@@ -14,3 +14,20 @@ console.log(`Name: ${user.name}\nAge: ${user.age}`);
 if (user["likes birds"]) {
 	console.log(`${user.name} likes birds.`);
 }
+
+// TODO: Property value shorthand
+/**
+ * User constructor
+ * @param {string} name : name of user
+ * @param {number} age : age of user
+ * @return {Object}
+ */
+function makeUser(name, age) {
+	return {
+		name: name, // No shorthand
+		age: age // No shorthand
+	}
+}
+
+let newUser = makeUser("Jack", 48);
+console.log(`Name: ${newUser.name}, age: ${newUser.age}`);

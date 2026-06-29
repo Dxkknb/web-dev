@@ -46,3 +46,16 @@ function makeStudent(name, age, grade) {
 		grade // same as grade: grade
 	}
 }
+
+// TODO: Property existence test, "in" operator
+
+const redColor = {
+	name: "red",
+	hex: "#FF0000"
+};
+
+if ("hex" in redColor) {
+	document.getElementById("red-btn").style.backgroundColor = redColor.hex;
+} else {
+	document.getElementById("red-btn").style.backgroundColor = "#AAA";
+}

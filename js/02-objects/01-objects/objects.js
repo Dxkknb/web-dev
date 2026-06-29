@@ -59,3 +59,9 @@ if ("hex" in redColor) {
 } else {
 	document.getElementById("red-btn").style.backgroundColor = "#AAA";
 }
+
+// TODO: The "for ... in" loop
+
+for (let key in user) {
+	console.log(`${key} => ${user[key]}`);
+}

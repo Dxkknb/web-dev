@@ -31,3 +31,18 @@ function makeUser(name, age) {
 
 let newUser = makeUser("Jack", 48);
 console.log(`Name: ${newUser.name}, age: ${newUser.age}`);
+
+/**
+ * Student constructor
+ * @param {string} name : name of student
+ * @param {number} age : age of student
+ * @param {string} grade : grade od student
+ * @return {Object}
+ */
+function makeStudent(name, age, grade) {
+	return {
+		name, // same as name: name
+		age, // same as age: age
+		grade // same as grade: grade
+	}
+}

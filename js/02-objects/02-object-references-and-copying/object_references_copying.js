@@ -19,3 +19,17 @@ admin.name = "Jack Doe";
 
 console.log("User:", user); // User: {name: "Jack Doe"}
 console.log("Admin:", admin); // Admin: {name: "Jack Doe"}
+
+// TODO: Comparison by reference
+
+const person = {
+	name: "John",
+	age: 12
+}
+const student = person;
+
+let a = {};
+let b = {};
+
+console.log(person === student); // true, both variables refer to the same object
+console.log(a === b); // false, The two objects do not refer to different objects

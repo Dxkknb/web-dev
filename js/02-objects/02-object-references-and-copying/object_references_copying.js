@@ -33,3 +33,8 @@ let b = {};
 
 console.log(person === student); // true, both variables refer to the same object
 console.log(a === b); // false, The two objects do not refer to different objects
+
+// TODO: Cloning and merging, Object.assign
+
+const userCopy = Object.assign({job: "Engineer"}, user);
+console.log(userCopy);

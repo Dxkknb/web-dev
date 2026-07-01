@@ -33,3 +33,15 @@ console.log(parseFloat("12.5rem")); // 12.5
 
 console.log(parseInt("a12.3")); // NaN
 console.log(parseFloat("12.3.4")); // 12.3
+
+// Other math functions
+
+console.log(Math.random());
+console.log(Math.random());
+console.log(Math.random());
+
+console.log(Math.max(3, 5, -10, 0, 1)); // 5
+console.log(Math.min(1, 2)); // 1
+
+console.log(Math.pow(2, 10)); // 1024
+console.log(Math.pow(3, 5)); // 243

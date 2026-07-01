@@ -106,3 +106,41 @@ const person = {
 };
 
 console.log("Clean person object:", removeNullProperties(person));
+
+// TODO: Conditional merge
+
+/**
+ * The properties of obj2 replace those of obj1, provided they are not undefined.
+ * @param {Object} obj1
+ * @param {Object} obj2
+ * @return {Object}
+ */
+function mergeIgnoringUndefined(obj1, obj2) {
+	const result = structuredClone(obj1);
+
+	for (let [key, value] in Object.entries(obj2)) {
+		if (value !== undefined) {
+			result[key] = value;
+		}
+	}
+
+	return result;
+}
+
+const obj1 = {
+	name: "Bernard",
+	age: 30,
+	city: "Abidjan",
+	job: "Géomètre",
+};
+
+const obj2 = {
+	age: undefined,
+	city: "Yamoussoukro",
+	job: null,
+	country: "Côte d'Ivoire",
+};
+
+const result = mergeIgnoringUndefined(obj1, obj2);
+
+console.log("Merged Object:", result);

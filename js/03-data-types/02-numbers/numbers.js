@@ -25,3 +25,11 @@ console.log(Math.round(3.1)); // 3
 console.log(Math.round(3.6)); // 4
 console.log(Math.round(3.5)); // 4
 console.log(Math.round(-3.5)) // -3
+
+// TODO: ParseInt and parseFloat
+
+console.log(parseInt('100px')); // 100
+console.log(parseFloat("12.5rem")); // 12.5
+
+console.log(parseInt("a12.3")); // NaN
+console.log(parseFloat("12.3.4")); // 12.3

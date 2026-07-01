@@ -78,3 +78,31 @@ const obj = {
 };
 
 console.log("Reverse object:",reverseKeysAndValues(obj));
+
+// TODO: Remove null properties
+
+/**
+ * Remove null properties
+ * @param {Object} obj
+ * @return {Object}
+ */
+function removeNullProperties(obj) {
+	const newObj = {};
+
+	for (const key in obj) {
+		if (obj[key] === null || obj[key] === undefined) continue;
+
+		newObj[key] = obj[key];
+	}
+
+	return newObj;
+}
+
+const person = {
+	name: "Charles",
+	age: 12,
+	job: null,
+	city: undefined
+};
+
+console.log("Clean person object:", removeNullProperties(person));

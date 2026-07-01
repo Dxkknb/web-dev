@@ -53,3 +53,28 @@ function sumNumericProperties(obj) {
 }
 
 console.log("Sum of numeric values:", sumNumericProperties(salaries));
+
+// TODO: Reverse keys and values
+
+/**
+ * Reverse keys and values
+ * @param {Object} obj
+ * @return {Object}
+ */
+function reverseKeysAndValues(obj) {
+	const newObj = {};
+
+	for (const key in obj) {
+		newObj[obj[key]] = key;
+	}
+
+	return newObj;
+}
+
+const obj = {
+	a: 1,
+	b: 2,
+	c: 3
+};
+
+console.log("Reverse object:",reverseKeysAndValues(obj));

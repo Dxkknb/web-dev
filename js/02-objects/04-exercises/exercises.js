@@ -30,3 +30,26 @@ const salaries = {
 
 console.log("Number of properties:",countProperties(user));
 console.log("Number of properties:",countProperties(salaries));
+
+// TODO: Sum of numerical properties
+
+const isNumeric = (n) => !isNaN(n) && typeof n === "number";
+
+/**
+ * Only adds together properties whose values are numbers
+ * @param obj
+ * @return {number}
+ */
+function sumNumericProperties(obj) {
+	let total = 0;
+
+	for (let key in obj) {
+		if (!isNumeric(obj[key])) continue;
+
+		total += obj[key];
+	}
+
+	return total;
+}
+
+console.log("Sum of numeric values:", sumNumericProperties(salaries));

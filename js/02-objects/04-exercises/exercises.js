@@ -144,3 +144,76 @@ const obj2 = {
 const result = mergeIgnoringUndefined(obj1, obj2);
 
 console.log("Merged Object:", result);
+
+// TODO: Deep Freeze
+
+function deepFreeze(obj) {
+	// Primitives are immutable
+	if(obj === null || typeof obj !== "object") {
+		return obj;
+	}
+
+	// Avoid infinite loops in the event of circular references
+	const visited = new WeakSet();
+
+	function freeze(target) {
+		if (
+			target === null ||
+			typeof target !== "object" ||
+			visited.has(target)
+		) {
+			return;
+		}
+
+		visited.add(target);
+
+		// Recursively freeze properties
+		for (const key in Reflect.ownKeys(target)) {{
+			freeze(target[key]);
+		}}
+
+		// Make each property non-editable and non-configurable
+		for (const key of Reflect.ownKeys(target)) {
+			const descriptor = Object.getOwnPropertyDescriptor(target, key);
+
+			if ("value" in descriptor) {
+				Object.defineProperty(target, key, {
+					value: descriptor.value,
+					enumerable: descriptor.enumerable,
+					writable: false,
+					configurable: false,
+				});
+			} else {
+				// Getters
+				Object.defineProperty(target, key, {
+					get: descriptor.get,
+					set: descriptor.set,
+					enumerable: descriptor.enumerable,
+					configurable: false,
+				});
+			}
+		}
+
+		// Prevents new properties from being added
+		Object.preventExtensions(target);
+	}
+
+	freeze(obj);
+
+	return obj;
+}
+
+const newPerson = {
+	name: "Bernard",
+	address: {
+		city: "Abidjan",
+	},
+};
+
+deepFreeze(newPerson);
+
+newPerson.name = "Paul";           // ignoré (ou TypeError en mode strict)
+newPerson.address.city = "Paris";  // ignoré
+newPerson.age = 30;                // impossible
+
+console.log(newPerson);

@@ -100,3 +100,14 @@ console.log("Widget".includes("id", 3)); // false
 
 console.log("Widget".startsWith("Wid")); // true
 console.log("Widget".endsWith("get")); // true
+
+// TODO: Getting a substring
+
+let str2 = "stringify";
+
+console.log(str2.slice(0, 5)); // 'strin'
+console.log(str2.slice(0, 1)); // 's'
+console.log(str2.slice(2)); // 'ringify'
+
+console.log(str2.substring(2, 6)); // ring
+console.log(str2.substring(6, 2)); // ring

@@ -36,3 +36,11 @@ const truncate = (str, maxLength) => {
 
 console.log(truncate("Hi everyone!", 20) === "Hi everyone!"); // true
 console.log(truncate("Hi everyone!", 10));
+
+// TODO: Extract the money
+
+const extractCurrencyValue = (str) => {
+	return Number(str.slice(1));
+}
+
+console.log(extractCurrencyValue('$120') === 120);

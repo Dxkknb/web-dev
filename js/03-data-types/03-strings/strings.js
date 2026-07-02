@@ -62,3 +62,41 @@ console.log(string.toUpperCase()); // INTERFACE
 console.log(string.toLowerCase()); // interface
 console.log(capitalize(string)); // Interface
 
+// TODO: Searching for a substring
+
+// str.indexOf
+
+let paragraph = "Widget with id";
+
+console.log(paragraph.indexOf('Widget')); // 0, because 'Widget' is found at the beginning
+console.log(paragraph.indexOf('widget')); // -1, not found, the search is case-sensitive
+console.log(paragraph.indexOf('id')); // 1, 'id' is found at the positiob 1 (...idget with id)
+
+// Find all occurences positions
+
+let newStr = "As sly as a fox, as strong as an ox";
+let target = 'as';
+
+function findAllOccurrences(str, target) {
+	let pos = 0;
+	while(true) {
+		let foundPos = str.toLowerCase().indexOf(target, pos);
+		if (foundPos === -1) break;
+
+		console.log(`Found at ${foundPos}`);
+		pos = foundPos + 1;
+	}
+}
+
+findAllOccurrences(newStr, target);
+
+// includes, startsWith, endsWith
+
+console.log("Widget with id".includes("Widget")); // true
+console.log("Hello".includes("Bye")); // false
+
+console.log("Widget".includes("id")); // true
+console.log("Widget".includes("id", 3)); // false
+
+console.log("Widget".startsWith("Wid")); // true
+console.log("Widget".endsWith("get")); // true

@@ -44,3 +44,21 @@ for (let i = -1; i >= -str.length; i--) {
 for (const char of str) {
 	console.log(char);
 }
+
+// TODO: Changing the case
+
+let string = "Interface";
+
+/**
+ * Converts string in capitalize case
+ * @param {string} str - the string to convert
+ * @return {string} Capitalized string
+ */
+const capitalize = (str) => {
+	return str.at(0).toUpperCase() + str.toLowerCase().slice(1);
+}
+
+console.log(string.toUpperCase()); // INTERFACE
+console.log(string.toLowerCase()); // interface
+console.log(capitalize(string)); // Interface
+

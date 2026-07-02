@@ -23,3 +23,16 @@ const checkSpam = (str) => {
 console.log(checkSpam('buy ViAgRA now') === true);
 console.log(checkSpam('free xxxxx') === true);
 console.log(checkSpam("innocent rabbit") === false);
+
+// TODO: Truncate the text
+
+const truncate = (str, maxLength) => {
+	if (!str || str.length <= maxLength) {
+		return str;
+	}
+
+	return str.slice(0, maxLength) + "...";
+}
+
+console.log(truncate("Hi everyone!", 20) === "Hi everyone!"); // true
+console.log(truncate("Hi everyone!", 10));

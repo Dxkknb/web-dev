@@ -11,3 +11,15 @@ const ucFirst = (str) => {
 
 console.log(ucFirst(""));
 console.log(ucFirst("John Doe"));
+
+// TODO: Check for spam
+
+const checkSpam = (str) => {
+	const lowerStr = str.toLowerCase();
+
+	return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+}
+
+console.log(checkSpam('buy ViAgRA now') === true);
+console.log(checkSpam('free xxxxx') === true);
+console.log(checkSpam("innocent rabbit") === false);

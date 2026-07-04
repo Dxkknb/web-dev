@@ -63,3 +63,29 @@ for (let i = 0; i < reactions.length; i++) {
 for (const reaction of reactions) {
 	console.log(reaction);
 }
+
+// TODO: Multidimensional arrays
+
+const matrix = [
+	[1, 2, 3],
+	[4, 5, 6],
+	[7, 8, 9]
+];
+
+function transpose(matrix) {
+	const rows = matrix.length;
+	const cols = matrix[0].length;
+	const result = [];
+
+	for (let j = 0; j < cols; j++) {
+		result[j] = [];
+
+		for (let i = 0; i < rows; i++) {
+			result[j][i] = matrix[i][j];
+		}
+	}
+
+	return result;
+}
+
+console.log("Transposed Matrix:", transpose(matrix));

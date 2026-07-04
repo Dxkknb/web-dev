@@ -49,3 +49,17 @@ const intervalId = setInterval(() => {
 	console.log(copyFruits.shift());
 	console.log(copyFruits);
 }, 1000);
+
+// TODO: Array loops
+
+let reactions = ["😍", "😒", "😘", "😁"];
+
+// Old way to loop through an array
+for (let i = 0; i < reactions.length; i++) {
+	console.log(`${i}: ${reactions[i]}`);
+}
+
+// New form of loop
+for (const reaction of reactions) {
+	console.log(reaction);
+}

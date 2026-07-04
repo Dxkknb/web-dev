@@ -26,3 +26,10 @@ if (fruits.length) {
 	console.log("Fruits:", fruits); // Fruits: [ "Apple", "Orange", "Pear", "Lemon" ]
 }
 
+// TODO: Get last elements with "at"
+
+let last_fruit = fruits.at(-1);
+let before_last_fruit = fruits.at(-2);
+
+console.log("Last fruit:", last_fruit); // Lemon
+console.log("Before last fruit:", before_last_fruit); // Pear

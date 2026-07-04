@@ -33,3 +33,19 @@ let before_last_fruit = fruits.at(-2);
 
 console.log("Last fruit:", last_fruit); // Lemon
 console.log("Before last fruit:", before_last_fruit); // Pear
+
+// TODO: Methods pop/push, shift/unshift
+
+const copyFruits = [...fruits];
+
+let index = 0;
+
+const intervalId = setInterval(() => {
+	if (index === 10) {
+		clearInterval(intervalId);
+	}
+
+	copyFruits.push("Item " + (++index));
+	console.log(copyFruits.shift());
+	console.log(copyFruits);
+}, 1000);

@@ -44,3 +44,11 @@ const lastTwoPersons = persons.slice(persons.length - 2);
 for (const person of lastTwoPersons) {
 	console.log(person.display());
 }
+
+// TODO: Concat
+
+const array1 = [1, 2];
+const array2 = [3, 4, 5];
+const array3 = array1.concat(array2);
+
+console.log("Concatenate array:", array3);

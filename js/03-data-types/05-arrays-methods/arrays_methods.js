@@ -60,3 +60,56 @@ const animals = ["Lion", "Elephant", "Giraffe", "Tiger", "Zebra"];
 animals.forEach((item, index, array) => {
 	console.log(`${item} is at index ${index} in ${array}`);
 });
+
+// TODO: Searching in array
+
+// indexOf/lastIndexOf and includes
+let searchItem = "Elephant";
+const foundIndex = animals.indexOf(searchItem, 0);
+
+if (foundIndex === -1) {
+	console.log(`${searchItem} not in "${animals}"`);
+} else {
+	console.log(`${searchItem} is at index ${foundIndex}`);
+}
+
+
+const isIncluded = animals.includes(searchItem, 0);
+
+if (!isIncluded) {
+	console.log(`${searchItem} not in "${animals}"`);
+} else {
+	console.log(`${searchItem} is in "${animals}"`);
+}
+
+// find and findIndex/findLastIndex
+const users = [
+	{id: 1, name: "John"},
+	{id: 2, name: "Pete"},
+	{id: 3, name: "Mary"}
+];
+
+let user = users.find(item => item.name==="John") ?? "Anonymous";
+console.log("User:", user);
+
+let findIndex = users.findIndex(item => item.id === 2);
+
+if (findIndex !== -1) {
+	users.splice(findIndex, 1);
+	console.log(users);
+}
+
+// filter
+
+const newFruits = [
+	{ name: "Apple", averageWeight: 180 },
+	{ name: "Banana", averageWeight: 120 },
+	{ name: "Orange", averageWeight: 200 },
+	{ name: "Mango", averageWeight: 300 },
+	{ name: "Grapes (bunch)", averageWeight: 500 }
+];
+const heavyFruits = newFruits.filter((fruit) => {
+	return fruit.averageWeight >= 250;
+});
+
+console.log("Heavy fruits:", heavyFruits);

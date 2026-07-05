@@ -52,3 +52,11 @@ const array2 = [3, 4, 5];
 const array3 = array1.concat(array2);
 
 console.log("Concatenate array:", array3);
+
+// TODO: Iterate: forEach
+
+const animals = ["Lion", "Elephant", "Giraffe", "Tiger", "Zebra"];
+
+animals.forEach((item, index, array) => {
+	console.log(`${item} is at index ${index} in ${array}`);
+});

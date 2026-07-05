@@ -113,3 +113,68 @@ const heavyFruits = newFruits.filter((fruit) => {
 });
 
 console.log("Heavy fruits:", heavyFruits);
+
+// TODO: Transform an array
+
+// map
+const array = [1, 4, 9, 16];
+const doubled = array.map((x) => x * 2);
+
+console.log("Doubled:", doubled);
+
+const numbers = [3, -1, 1, 4, 1, 5, 9, 2, 6];
+const averaged = numbers
+	.filter((num) => num > 0)
+	.map((num, idx, arr) => {
+		const prev = arr[idx - 1];
+		const next = arr[idx + 1];
+		let count = 1;
+		let total = num;
+
+		if (prev !== undefined) {
+			count++;
+			total += prev;
+		}
+		if (next !== undefined) {
+			count++;
+			total += next;
+		}
+
+		const average = total / count;
+		return Math.round(average * 100) / 100;
+});
+
+console.log(averaged);
+
+// sort(fn)
+
+let arr = [1, 2, 15, 20];
+arr.sort();
+console.log("Array:", arr);
+
+// numeric sort
+arr.sort((a, b) => a - b);
+console.log("Ascending numbers:", arr);
+
+arr.sort((a, b) => b - a);
+console.log("Descending numbers:", arr);
+
+// reverse
+arr.reverse();
+console.log("Reversed array:", arr);
+
+// split and join
+
+let names = "Bilbo, Gandalf, Nazgul";
+const newNames = names.split(", ");
+
+for (const name of newNames) {
+	console.log(`A message to ${name}.`);
+}
+
+// reduce
+
+arr = [1, 2, 3, 4, 5];
+let result = arr.reduce((sum, current) => sum + current, 0);
+
+console.log("Sum of items:", result);

@@ -115,7 +115,7 @@ console.log("Only Admins:", onlyAdmins(userInfos));
  * @property {boolean} active - active user
  *
  * @param {User[]} users - list of users
- * @return {User[]} - Return only admins
+ * @return {User[]} - return users older than 18
  */
 function olderThanEighteen(users) {
 	return users.filter(user => user.age >= 18);

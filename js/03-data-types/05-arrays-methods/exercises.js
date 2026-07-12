@@ -122,3 +122,20 @@ function olderThanEighteen(users) {
 }
 
 console.log("Older than 18 users:", olderThanEighteen(userInfos));
+
+/**
+ * @typedef {Object} User
+ * @property {number} id - unique identifier
+ * @property {string} name - name of user
+ * @property {string} role - user's role
+ * @property {boolean} active - active user
+ *
+ * @param {User[]} users - list of users
+ * @return {User[]} - get usernames
+ */
+function getNames(users) {
+	return users.map(user => user.name);
+}
+
+console.log("Usernames:", getNames(userInfos));
+

@@ -39,4 +39,26 @@ const prices = {
  );
 
  console.log("Double prices:", doublePrices);
+
+ // TODO: Exercise
+
+ const salaries = {
+    "John": 100,
+    "Pete": 300,
+    "Mary": 250
+ };
+
+
+/**
+ * Sum salaries
+ * @param {Object} salaries
+ * @return {number}
+ */
+ const sumSalaries = (salaries) => {
+    return Object.values(salaries)
+            .reduce((total, salary) => total + salary, 0);
+ }
+
+ console.log("Sum of salaries:", sumSalaries(salaries));
+ 
  

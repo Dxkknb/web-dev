@@ -22,3 +22,9 @@ let range = {
 for (let num of range) {
 	console.log(num);
 }
+
+// String is iterable
+
+for (let char of "Hello") {
+	console.log(char);
+}

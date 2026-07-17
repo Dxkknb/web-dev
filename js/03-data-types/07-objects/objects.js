@@ -23,5 +23,20 @@ console.log("Object.entries:", Object.entries(user)); // [ "name", "John Doe" ],
 
 for (let [key, value] of Object.entries(user)) {
     console.log(`${key} -> ${value}`);
-    
 }
+
+// TODO: Transform objects
+
+const prices = {
+    banana: 1,
+    orange: 2,
+    meat: 5,
+};
+
+ const doublePrices = Object.fromEntries(
+    Object.entries(prices)
+    .map(([item, price])=> [item, 2 * price])
+ );
+
+ console.log("Double prices:", doublePrices);
+ 

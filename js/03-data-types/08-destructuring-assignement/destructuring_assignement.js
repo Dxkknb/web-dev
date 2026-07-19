@@ -27,3 +27,46 @@ let person = {
 for (const [key, value] of Object.entries(person)) {
     console.log(`${key} -> ${value}`);
 }
+
+// Object destructuring
+
+let options = {
+    title: "Menu",
+    width: 100,
+    height: 200
+};
+
+let {title, width, height} = options;
+console.log(title, width, height);
+
+let {mainTitle, ...others} = options;
+console.log(mainTitle);
+console.log(others);
+
+// Exercise
+
+let salaries = {
+    "John": 100,
+    "Peter": 300,
+    "Mary": 250
+}
+
+function topSalary(salaries) {
+    let maxSalary = 0;
+    let maxName = null;
+
+    if (Object.keys(salaries).length === 0) {
+        return null;
+    }
+
+    Object.entries(salaries).forEach(([name, salary]) => {
+        if (maxSalary < salary) {
+            maxSalary = salary;
+            maxName = name;
+        }
+    });
+
+    return maxName;
+}
+
+console.log("Max salary: ", topSalary(salaries));

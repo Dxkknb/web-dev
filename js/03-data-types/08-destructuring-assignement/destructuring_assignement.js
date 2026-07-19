@@ -15,3 +15,15 @@ let [firstname, surname] = "Sam Smith".split(" ");
 
 console.log(firstname, surname);
 
+// Destructuring in loop
+
+let person = {
+    name: "Konan Bernard",
+    age: 30,
+    job: "Surveyor",
+    salary: 7500
+};
+
+for (const [key, value] of Object.entries(person)) {
+    console.log(`${key} -> ${value}`);
+}

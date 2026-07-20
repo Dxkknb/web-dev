@@ -14,3 +14,14 @@ function currentDate() {
 }
 
 currentDate();
+
+// TODO: Current Time
+
+function currentTime() {
+    const currentDateTime = new Date();
+
+    console.log("It's actually:");
+    console.log(`${currentDateTime.getHours()}:${currentDateTime.getMinutes()}:${currentDateTime.getSeconds()}`);
+}
+
+currentTime();

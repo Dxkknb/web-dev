@@ -116,3 +116,14 @@ let end = new Date();
 console.log( `The loop took ${end - start} ms` );
 
 
+// TODO: Show a weekday
+/**
+ * Show the weekday in short format: ‘MO’, ‘TU’, ‘WE’, ‘TH’, ‘FR’, ‘SA’, ‘SU’ 
+ * @param {Date} date 
+ * @returns {string}
+ */
+function getWeekDay(date) {
+  const WEEKDAYS = ["MO","TU","WE","TH","FR","SA","SU"]
+
+  return WEEKDAYS[date.getDay()];
+}

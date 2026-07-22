@@ -25,3 +25,47 @@ function currentTime() {
 }
 
 currentTime();
+
+// TODO: More information about current date
+
+function dateNow() {
+    const MONTHS = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+    ];
+
+    const DAYS = [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
+    ];
+
+    const date = new Date();
+
+    const year = date.getFullYear();
+    const month = MONTHS[date.getMonth()];
+    const day = date.getDate();
+    const weekday = DAYS[date.getDay()];
+
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+
+    return {year, month, day, weekday, hours, minutes, seconds};
+}
+
+console.log("Date infos:", dateNow());

@@ -69,3 +69,25 @@ function dateNow() {
 }
 
 console.log("Date infos:", dateNow());
+
+// TODO: Name of day
+/**
+ * Display current day
+ * @param {Date} date : date objet
+ * @return {string} : current day name
+ */
+function displayDay(date) {
+    const DAYS = [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
+    ];
+
+    return DAYS[date.getDay()];
+}
+
+console.log( "Today is " + displayDay(new Date()));

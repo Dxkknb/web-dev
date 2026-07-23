@@ -91,3 +91,34 @@ function displayDay(date) {
 }
 
 console.log( "Today is " + displayDay(new Date()));
+
+// TODO: Calculate age
+
+/**
+ * Calculate a person’s age in years based on their birthdate.
+ *
+ * @param {Date} birthDate - The person’s date of birth.
+ * @returns {number} The person's current age in full years.
+ * @throws {Error} If the birthdate is the future.
+ */
+function calculateAge(birthDate) {
+    const now = new Date();
+
+    if (now.getTime() - birthDate.getTime() < 0) {
+        throw Error("Birth date is invalid");
+    }
+
+    let age = now.getFullYear() - birthDate.getFullYear();
+
+    const hasHadBirthThisYear =
+        now.getMonth() > birthDate.getMonth() ||
+        (now.getMonth() === birthDate.getMonth() && now.getDate() === birthDate.getDate());
+
+    if (!hasHadBirthThisYear) {
+        age--;
+    }
+
+    return age;
+}
+
+console.log(calculateAge(new Date("1996-08-03")));

@@ -15,3 +15,9 @@ let student = {
 let json = JSON.stringify(student);
 console.log("Type:", typeof json);
 console.log("Student json:", json);
+
+// JSON.parse
+
+const studentObj = JSON.parse(json);
+console.log("Type:", typeof studentObj, typeof studentObj.isAdmin);
+console.log("studentObj:", studentObj);

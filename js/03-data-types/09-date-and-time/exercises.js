@@ -122,3 +122,39 @@ function calculateAge(birthDate) {
 }
 
 console.log(calculateAge(new Date("1996-08-03")));
+
+// TODO: Days before Christmas
+/**
+ * Convert the difference between two dates into a number of full days.
+ *
+ * @param {Date} futureDate - The later date.
+ * @param {Date} currentDate - The earlier (reference) date.
+ * @return {number} The number of days between the two dates, rounded to the nearest.
+ */
+function millisecondsToDays(futureDate, currentDate) {
+    const msPerDay = 24 * 60 * 60 * 1000;
+    return Math.round( (futureDate - currentDate) / msPerDay)
+}
+
+/**
+ * Calculate the number of days remaining before the next Christmas (December 25th).
+ * If Christmas has already passed this year, the calculation target next year's Christmas.
+ *
+ * @return {number} The number of days left before the next Christmas.
+ */
+function daysBeforeChristmas() {
+    const now = new Date();
+
+    // Normalize "today" to midnight so the day count isn't skewed by the current time of day.
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+    let christmasDate = new Date(today.getFullYear(), 11, 25);
+
+    if (today > christmasDate) {
+        christmasDate = new Date(today.getFullYear() + 1, 11, 25);
+    }
+
+    return millisecondsToDays(christmasDate, currentDate);
+}
+
+console.log(`There are ${daysBeforeChristmas()} days left before the next Christmas.`);

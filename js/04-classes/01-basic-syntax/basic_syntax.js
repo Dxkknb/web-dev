@@ -4,6 +4,9 @@
  * Represents a single student.
  */
 class Student {
+
+    schoolName = "Harvard Law School";
+
     /**
      * Creates a student.
      *
@@ -45,6 +48,7 @@ class Student {
         console.log(`
 Full name: ${this.fullName()}
 Grade: ${this.grade}
+School: ${this.schoolName}
         `)
     }
 }

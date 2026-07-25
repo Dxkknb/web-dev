@@ -46,6 +46,17 @@ class Animal {
  */
 class Rabbit extends Animal {
     /**
+     * Creates a rabbit.
+     *
+     * @param {string} name - Name of the rabbit.
+     * @param {number} earLength - Rabbit ear length.
+     */
+    constructor(name, earLength= 5) {
+        super(name);
+        this.earLength = earLength;
+    }
+
+    /**
      * The rabbit hides and the speed goes to 0.
      */
     hide() {
@@ -59,10 +70,18 @@ class Rabbit extends Animal {
         this.speed = 0;
         console.log(`${this.name} stops with speed ${this.speed} km/h`);
     }
+
+    /**
+     * Displays rabbit info
+     */
+    display() {
+        console.log(`${this.name} has ${this.earLength} cm as ear size.`);
+    }
 }
 
 
-let rabbit = new Rabbit("White Rabbit");
+let rabbit = new Rabbit("White Rabbit", 10);
 rabbit.run(5);
 rabbit.hide();
 rabbit.stop();
+rabbit.display();

@@ -51,9 +51,18 @@ class Rabbit extends Animal {
     hide() {
         console.log(`${this.name} hides!`);
     }
+
+    /**
+     * Animal stops if the speed is equal to 0.
+     */
+    stop() {
+        this.speed = 0;
+        console.log(`${this.name} stops with speed ${this.speed} km/h`);
+    }
 }
 
 
 let rabbit = new Rabbit("White Rabbit");
 rabbit.run(5);
 rabbit.hide();
+rabbit.stop();

@@ -87,8 +87,6 @@ class User {
      * @param {number} id - Unique identifier of the user
      * @param {string} username - Username of the user.
      * @param {string} email - Email of the user.
-     * @param {string} password - Non hashed password of the user.
-     * @param {boolean} [loggedIn=false] - Whether a user is logged in or not.
      */
     constructor(id, username, email) {
         this.id = id;

@@ -14,9 +14,19 @@ class Student {
      */
     constructor(id,firstName, lastName, grade) {
         this.id = id;
-        this.firstName = firstName;
+        this._firstName = firstName;
         this.lastName = lastName;
         this.grade = grade;
+    }
+
+    // Getters and setters
+
+    get firstName() {
+        return this._firstName;
+    }
+
+    set firstName(v) {
+        this._firstName = v;
     }
 
     /**

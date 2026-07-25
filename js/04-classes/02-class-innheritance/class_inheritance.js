@@ -85,3 +85,65 @@ rabbit.run(5);
 rabbit.hide();
 rabbit.stop();
 rabbit.display();
+
+/*
+* Exercises
+*/
+
+// TODO: Extended clock
+
+
+const inferiorThanZero = (time) => {
+    if (time < 10) {
+        return "0" + time;
+    }
+
+    return `${time}`;
+}
+
+class Clock {
+    constructor({template}) {
+        this.template = template;
+    }
+
+    render() {
+        let date = new Date();
+
+        let hours = inferiorThanZero(date.getHours());
+        let mins = inferiorThanZero(date.getMinutes());
+        let secs = inferiorThanZero(date.getSeconds());
+
+        let output = this.template
+            .replace('h', hours)
+            .replace('m', mins)
+            .replace('d', secs);
+
+        console.log(output);
+    }
+
+    start() {
+        this.render();
+        this.timer = setInterval(() => this.render() ,1000)
+    }
+
+    stop() {
+        clearInterval(this.timer);
+    }
+}
+
+class ExtendedClock extends Clock {
+    constructor(options) {
+        super(options);
+        let {precision = 1000} = options;
+        this.precision = precision;
+    }
+
+    start() {
+        this.render();
+        this.timer = setInterval(() => this.render(), this.precision);
+    }
+}
+
+const clock = new ExtendedClock({template: 'h:m:d'});
+
+clock.start();

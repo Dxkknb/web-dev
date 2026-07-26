@@ -1,0 +1,4 @@
+export const sum = (items) => items.reduce((acc, item) => acc + item, 0);
+
+export const multiply = (items) => items.reduce((acc, item) => acc * item, 1);
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Posts</title>
+
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .post {
+            margin-block: 1rem;
+            padding: 1rem;
+            background-color: #ffcce2;
+            border-radius: 0.2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="lastPosts">
+    <h1>Last Posts</h1>
+</div>
+<script>
+    loadPosts()
+
+
+    function loadPosts() {
+        // HTML elements
+        const lastPosts = document.querySelector('#lastPosts');
+        const loader = createElement('p', 'loader', 'Chargement...');
+        lastPosts.append(loader);
+
+        getPosts()
+            .then((posts) => {
+                if (posts?.length > 0) {
+                    const mappedPosts = posts.map((post) => {
+                        const newPost = new Post({id, title, body} = post);
+                        return newPost.render();
+                    })
+
+                    loader.remove();
+                    lastPosts.append(...mappedPosts);
+                }
+            }).catch((err) => {
+                loader.innerText = "Impossible de charger les posts.";
+                loader.style.color = "red";
+        })
+
+    }
+
+
+    // Model
+    class Post {
+        constructor({id, title, body}) {
+            this.id = id;
+            this.title = title;
+            this.body = body;
+        }
+
+        /**
+         * @return {HTMLDivElement}
+         */
+        render() {
+            const postContainer = createElement("div", 'post', null);
+            postContainer.classList.add("post");
+
+            // Post title
+            const postTitle = createElement('h3', 'post-title', title + "-#" + this.id);
+
+            // Post body
+            const postBody = createElement('div', 'post-body', this.body);
+
+            // Add elements to postContainer
+            postContainer.append(postTitle, postBody);
+
+            return postContainer;
+        }
+    }
+
+    // Get data
+    async function getPosts(limit = 5) {
+        const getPostPromise = (postId) => {
+            return fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                }
+            }).then(res => {
+                if (!res.ok) {
+                    throw new Error('Server Error.');
+                }
+
+                return res.json();
+            });
+        }
+
+        const promises = [];
+
+        for (let i = 1; i <= limit; i++) {
+            promises.push(getPostPromise(i));
+        }
+
+        return Promise.all(promises);
+
+    }
+
+    // Utils
+    function createElement(tagName, className, content) {
+        const element = document.createElement(tagName);
+
+        element.classList.add(className);
+        element.textContent = content;
+
+        return element;
+    }
+
+</script>
+</body>
+</html>

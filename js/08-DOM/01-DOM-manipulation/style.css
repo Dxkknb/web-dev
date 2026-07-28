@@ -97,3 +97,7 @@ div p {
 .bg-dark {
     background-color: #777777;
 }
+
+.bold {
+    font-weight: bold;
+}

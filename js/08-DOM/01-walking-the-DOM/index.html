@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walking the DOM</title>
+    <style>
+        * {
+            text-align: justify;
+            text-indent: 0%;
+        }
+
+        .main {
+            max-width: 80vw;
+            margin-inline: auto;
+        }
+
+        .title {
+            font-size: 2.35rem;
+        }
+
+        .list {
+            list-style: none;
+            li {
+                font-size: 1.25em;
+                line-height: 1.4;
+                margin-block: 1rem;
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    width: 9px;
+                    height: 9px;
+                    position: absolute;
+                    left: -20px;
+                    background-color: red;
+                    border-radius: 50%;
+                }
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2 class="title">Fruits</h2>
+        <ul class="list">
+            <li>Apple 🍏</li>
+            <li>Banana 🍌</li>
+            <li>Orange 🍊</li>
+            <li>Mango 🥭</li>
+            <li>Strawberry 🍓</li>
+        </ul> 
+    </div>
+    <script src="./index.js" type="module" defer></script>
+</body>
+</html>

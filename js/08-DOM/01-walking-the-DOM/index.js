@@ -38,3 +38,11 @@ function handleClick(e) {
 for(const element of document.body.childNodes) {
     console.log(element);
 }
+
+// Element-only navigation
+
+const secondListElement = document.querySelector(".list > li:nth-child(2)");
+
+console.log("Parent element:", secondListElement.parentElement);
+console.log("Previous element sibling:", secondListElement.previousElementSibling);
+console.log("Next element sibling:", secondListElement.nextElementSibling);

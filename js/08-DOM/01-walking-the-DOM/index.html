@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Walking the DOM</title>
     <style>
-        * {
+
+        *, *::before, *::after {
             text-align: justify;
-            text-indent: 0%;
+            box-sizing: border-box;
         }
 
         .main {
@@ -42,13 +43,18 @@
             
         }
 
+        .highlight {
+            display: inline-flex;
+            color: #FFFFFF;
+            background-color: #fb9595;
+        }
     </style>
 </head>
 <body>
     <div class="main">
         <h2 class="title">Fruits</h2>
         <ul class="list">
-            <li>Apple 🍏</li>
+            <li class="highlight">Apple 🍏</li>
             <li>Banana 🍌</li>
             <li>Orange 🍊</li>
             <li>Mango 🥭</li>

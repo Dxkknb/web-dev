@@ -48,6 +48,17 @@
             color: #FFFFFF;
             background-color: #fb9595;
         }
+
+        .table, .tr, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+
+        .diagonal {
+            background-color: red;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -59,7 +70,8 @@
             <li>Orange 🍊</li>
             <li>Mango 🥭</li>
             <li>Strawberry 🍓</li>
-        </ul> 
+        </ul>
+        <div id="matrix"></div>
     </div>
     <script src="./index.js" type="module" defer></script>
 </body>
